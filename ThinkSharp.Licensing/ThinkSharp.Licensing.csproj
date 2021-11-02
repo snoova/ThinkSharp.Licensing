@@ -8,9 +8,9 @@
     <Product>ThinkSharp.Licensing</Product>
     <Description>Simple library with fluent API for creating and verifying signed licenses</Description>
     <PackageTags>License Signing Serial Key Security</PackageTags>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
-    <Version>1.0.0</Version>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.1.0</Version>
     <PackageLicenseFile>LICENSE.TXT</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/JanDotNet/ThinkSharp.Licensing</PackageProjectUrl>
     <Copyright>Copyright (c) 2017, 2021 Jan-Niklas Schäfer</Copyright>

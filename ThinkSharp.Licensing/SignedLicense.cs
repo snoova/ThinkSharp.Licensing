@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using ThinkSharp.Licensing.Exceptions;
 using ThinkSharp.Licensing.Helper;
 using ThinkSharp.Licensing.Signing;
 
@@ -22,7 +23,7 @@ namespace ThinkSharp.Licensing
 
         internal SignedLicense(string hardwareIdentifier, string serialNumber, DateTime issueDate, DateTime expirationDate, IDictionary<string, string> properties)
             : this(hardwareIdentifier, serialNumber, DateTime.UtcNow.Date, expirationDate, properties, null)
-        {  }
+        { }
 
         private SignedLicense(string hardwareIdentifier, string serialNumber, DateTime issueDate, DateTime expirationDate, IDictionary<string, string> properties, string signature)
         {
@@ -36,6 +37,7 @@ namespace ThinkSharp.Licensing
                 throw new FormatException("Character ':' is not allowed in property key.");
 
             Properties = new ReadOnlyDictionary<string, string>(dict);
+            VerifyExceptions = new List<Exception>();
         }
 
         //  Properties
@@ -62,7 +64,10 @@ namespace ThinkSharp.Licensing
         /// List of custom key value pairs that are part of the license.
         /// </summary>
         public IDictionary<string, string> Properties { get; }
-
+        /// <summary>
+        /// List of verify exceptions of the license.
+        /// </summary>
+        public List<Exception> VerifyExceptions { get; }
         /// <summary>
         /// Gets a value that indicates if the license has a serial number.
         /// </summary>

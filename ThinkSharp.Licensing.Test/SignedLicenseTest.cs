@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ThinkSharp.Licensing;
+using ThinkSharp.Licensing.Exceptions;
 using ThinkSharp.Licensing.Signing.RSA;
 using ThinkSharp.Licensing.Test.Signing;
 

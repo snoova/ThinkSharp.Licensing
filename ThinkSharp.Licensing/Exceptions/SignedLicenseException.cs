@@ -4,7 +4,7 @@
 using System;
 using System.Linq;
 
-namespace ThinkSharp.Licensing
+namespace ThinkSharp.Licensing.Exceptions
 {
     public class SignedLicenseException : Exception
     {
